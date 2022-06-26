@@ -16,3 +16,12 @@ This core has been tested on Xilinix Vivado 2020.2 Simulator.
 * UART Peripheral is taken from http://www.opencores.org/cores/uart16550/
 * Branch Prediction Unit with 2-bit branch direction predictor designed using PC-Gshare branch predictor.
 * Working Frequency is 50MHz on Xilinx Vertex xc7vx485tffg1761-2 FPGA. 
+# Interfaces
+| Name  | Description |
+| ------------- | ------------- |
+| clk_in1_n  | Clock Input negative  |
+| clk_in1_p | Clock input postive |
+| rst_in  | Async reset, active-high.  |
+| srx_pad_i |  Receiver Input pin |
+| stx_pad_o  |  Transmitter Output pin |
+| int_in |  3-bit Interrupt input |
