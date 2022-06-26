@@ -9,13 +9,24 @@ This core has been tested on Xilinix Vivado 2020.2 Simulator.
 # Features
 * The processor is in-order, single-issue scalar core.
 * The CPU has five-stage pipeline- Instruction Fetch, Instruction Decode, Execution, Memory and Write-Back.
+* Branch Prediction Unit with 2-bit branch direction predictor designed using PC-Gshare branch predictor.
 * I-Cache and D-Cache are 8KB size, 2-way set associative, with block size of 32 bytes.
 * I-TLB and D-TLB are translation lookaside buffers (TLB) for I-Cache and D-cache respectively, uses Economic Value Added policy as replacement block.
 * Whisbone B3 bus is designed to access Memory and UART 1650 Peripheral. 
 * Main Memory is of size 1MB.
 * UART Peripheral is taken from http://www.opencores.org/cores/uart16550/
-* Branch Prediction Unit with 2-bit branch direction predictor designed using PC-Gshare branch predictor.
 * Working Frequency is 50MHz on Xilinx Vertex xc7vx485tffg1761-2 FPGA. 
+
+# Memory Map
+| Name  | Range |
+| ------------- | ------------- |
+| Main Memory   | 0x00000000 - 0x000F_FFFF |
+| Boot Address  | 0x0000_0400 |
+| ROM  |  0x0000_0000 - 0x0001_FFFF |
+| RAM |  0x0002_0000 - 0x000F_FFFF |
+| Stack pointer Address  |  0x000F_EFFC |
+| UART Peripheral |  0x5f10_0600 |
+
 # Interfaces
 | Name  | Description |
 | ------------- | ------------- |
@@ -25,3 +36,4 @@ This core has been tested on Xilinix Vivado 2020.2 Simulator.
 | srx_pad_i |  Receiver Input pin |
 | stx_pad_o  |  Transmitter Output pin |
 | int_in |  3-bit Interrupt input |
+
