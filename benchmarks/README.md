@@ -4,7 +4,7 @@
 * RISC-V GCC Cross Compiler (https://github.com/riscv-collab/riscv-gnu-toolchain).
 
 # Command to run
-* **make all** command should enter command prompt in Ubuntu Machine, in the present working directory.
+* **make all** command should enter in terminal on Ubuntu Machine, in the present working directory.
 * Example: Goto matrixmultiplication directory in terminal, and enter **make all**.
 
 # To-Do
